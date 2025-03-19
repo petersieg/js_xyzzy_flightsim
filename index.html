@@ -406,12 +406,12 @@
 		}
 
 
-		if (upState) J++;
-		if (downState) J--;
-		if (leftState) u++;
-		if (rightState) u--;
-		if (fastState) h++;
-		if (slowState) h--;
+		if (upState) J = 1;
+		if (downState) J = -1;
+		if (leftState) u = 1;
+		if (rightState) u = -1;
+		if (fastState) h = 1;
+		if (slowState) h = -1;
 
 		L += dt * (X * t + P * M + m * l);
 		T = X * X + l * l + M * M;
