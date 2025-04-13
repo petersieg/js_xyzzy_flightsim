@@ -52,7 +52,8 @@
 
 <p>Construct a GIF image with javascript and load data into an &lt;img&gt; element.</p>
 
-<p>Arrows for movement.<br/>
+<p>Arrows for movement:<br/>
+	<a href="javascript:go_norm()">Norm</a> <a href="javascript:go_left()">Left</a> <a href="javascript:go_right()">Right</a> <a href="javascript:go_up()">Up</a> <a href="javascript:go_down()">Down</a>
 	Page up/down for faster/slower.<br/>
 	Home for re-center stick.</p>
 
@@ -175,6 +176,31 @@
 		h = 8;
 	}
 
+	function go_norm() {
+		upState = 0;
+		downState = 0;
+		leftState = 0;
+		rightState = 0;
+		fastState = 0;
+		slowState = 0;
+	}
+	
+    function go_left() {
+    	leftState = 1;
+    }
+    
+    function go_right() {
+    	rightState = 1;
+    }
+    
+    function go_up() {
+    	upState = 1;
+    }
+    
+    function go_down() {
+    	downState = 1;
+    }
+    
 	window.onkeydown = function (e) {
 		switch (e.keyCode) {
 			case 38:
